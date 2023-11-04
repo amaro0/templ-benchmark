@@ -2,7 +2,15 @@ Performance benchmark of native [html/template](https://pkg.go.dev/html/template
 
 **TLDR:** Templ is way faster.
 
+### Run with
+```bash
+$ make bench
+
+$ make bench count=22
 ```
+
+### Results 
+```text
 goos: linux
 goarch: amd64
 pkg: templ-benchmark
