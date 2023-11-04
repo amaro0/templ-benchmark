@@ -1,0 +1,30 @@
+Performance benchmark of native [html/template](https://pkg.go.dev/html/template) and [templ](https://templ.guide/).
+
+**TLDR:** Templ is way faster.
+
+```
+goos: linux
+goarch: amd64
+pkg: templ-benchmark
+cpu: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+         │    templ     │                  native                  │
+         │    sec/op    │     sec/op      vs base                  │
+Hello-8    174.7n ± 48%     971.6n ± 58%   +456.31% (p=0.000 n=10)
+Table-8    740.9µ ±  4%   11551.7µ ± 33%  +1459.07% (p=0.000 n=10)
+Layout-8   752.2µ ± 11%   11544.0µ ± 31%  +1434.61% (p=0.000 n=10)
+geomean    46.00µ           506.0µ        +1000.00%
+
+         │    templ     │                native                │
+         │     B/op     │     B/op      vs base                │
+Hello-8      200.0 ± 0%     368.0 ± 0%  +84.00% (p=0.000 n=10)
+Table-8    2.643Mi ± 0%   4.835Mi ± 0%  +82.92% (p=0.000 n=10)
+Layout-8   2.643Mi ± 0%   4.830Mi ± 0%  +82.73% (p=0.000 n=10)
+geomean    112.7Ki        206.5Ki       +83.22%
+
+         │    templ    │                 native                 │
+         │  allocs/op  │  allocs/op    vs base                  │
+Hello-8     5.000 ± 0%    13.000 ± 0%   +160.00% (p=0.000 n=10)
+Table-8    2.018k ± 0%   56.781k ± 0%  +2713.73% (p=0.000 n=10)
+Layout-8   2.017k ± 0%   56.780k ± 0%  +2715.07% (p=0.000 n=10)
+geomean     273.0         3.474k       +1172.28%
+```

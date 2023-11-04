@@ -1,0 +1,27 @@
+{{define "table"}}
+<p>Table: {{ .TableName }}</p>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Number</th>
+        <th>Complex</th>
+        <th>Static</th>
+    </tr>
+    {{ range .Items}}
+    <tr>
+        <td>{{ .Id }}</td>
+        <td>{{ .Name }}</td>
+        <td>{{ .Number }}</td>
+        <td>
+            <div>
+                <p>{{ .Id }}</p>
+                <p>{{ .Name }}</p>
+                <p>{{ .Number }}</p>
+            </div>
+        </td>
+        <td>Static</td>
+    </tr>
+    {{ end}}
+</table>
+{{end}}

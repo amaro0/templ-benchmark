@@ -1,0 +1,66 @@
+goos: linux
+goarch: amd64
+pkg: templ-benchmark
+cpu: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz
+BenchmarkHello/engine=native-8         	  717676	      1603 ns/op	     368 B/op	      13 allocs/op
+BenchmarkHello/engine=native-8         	  692044	      1532 ns/op	     368 B/op	      13 allocs/op
+BenchmarkHello/engine=native-8         	 1252624	       966.2 ns/op	     368 B/op	      13 allocs/op
+BenchmarkHello/engine=native-8         	 1220749	       970.0 ns/op	     368 B/op	      13 allocs/op
+BenchmarkHello/engine=native-8         	 1256955	       961.8 ns/op	     368 B/op	      13 allocs/op
+BenchmarkHello/engine=native-8         	 1222154	      1018 ns/op	     368 B/op	      13 allocs/op
+BenchmarkHello/engine=native-8         	 1242921	       962.2 ns/op	     368 B/op	      13 allocs/op
+BenchmarkHello/engine=native-8         	 1227739	       973.2 ns/op	     368 B/op	      13 allocs/op
+BenchmarkHello/engine=native-8         	 1218315	       986.8 ns/op	     368 B/op	      13 allocs/op
+BenchmarkHello/engine=native-8         	 1224520	       964.4 ns/op	     368 B/op	      13 allocs/op
+BenchmarkHello/engine=templ-8          	 6925020	       181.1 ns/op	     200 B/op	       5 allocs/op
+BenchmarkHello/engine=templ-8          	 7194484	       171.6 ns/op	     200 B/op	       5 allocs/op
+BenchmarkHello/engine=templ-8          	 7045814	       172.5 ns/op	     200 B/op	       5 allocs/op
+BenchmarkHello/engine=templ-8          	 7197942	       170.1 ns/op	     200 B/op	       5 allocs/op
+BenchmarkHello/engine=templ-8          	 7016082	       175.8 ns/op	     200 B/op	       5 allocs/op
+BenchmarkHello/engine=templ-8          	 6946576	       259.0 ns/op	     200 B/op	       5 allocs/op
+BenchmarkHello/engine=templ-8          	 4641022	       269.1 ns/op	     200 B/op	       5 allocs/op
+BenchmarkHello/engine=templ-8          	 7072800	       171.7 ns/op	     200 B/op	       5 allocs/op
+BenchmarkHello/engine=templ-8          	 6938006	       173.5 ns/op	     200 B/op	       5 allocs/op
+BenchmarkHello/engine=templ-8          	 7012768	       221.0 ns/op	     200 B/op	       5 allocs/op
+BenchmarkTable/engine=native-8         	      92	  11800666 ns/op	 5069841 B/op	   56781 allocs/op
+BenchmarkTable/engine=native-8         	      99	  12179404 ns/op	 5070007 B/op	   56781 allocs/op
+BenchmarkTable/engine=native-8         	      92	  11302647 ns/op	 5070001 B/op	   56781 allocs/op
+BenchmarkTable/engine=native-8         	     150	   7752027 ns/op	 5069974 B/op	   56781 allocs/op
+BenchmarkTable/engine=native-8         	     156	   7756681 ns/op	 5069910 B/op	   56781 allocs/op
+BenchmarkTable/engine=native-8         	     100	  10127698 ns/op	 5069901 B/op	   56781 allocs/op
+BenchmarkTable/engine=native-8         	      84	  11968824 ns/op	 5069970 B/op	   56781 allocs/op
+BenchmarkTable/engine=native-8         	      87	  12257431 ns/op	 5070012 B/op	   56781 allocs/op
+BenchmarkTable/engine=native-8         	      86	  12223167 ns/op	 5069932 B/op	   56781 allocs/op
+BenchmarkTable/engine=native-8         	     156	   7811407 ns/op	 5069756 B/op	   56780 allocs/op
+BenchmarkTable/engine=templ-8          	    1634	    737245 ns/op	 2771660 B/op	    2018 allocs/op
+BenchmarkTable/engine=templ-8          	    1654	    714025 ns/op	 2771662 B/op	    2018 allocs/op
+BenchmarkTable/engine=templ-8          	    1698	    710443 ns/op	 2771664 B/op	    2018 allocs/op
+BenchmarkTable/engine=templ-8          	    1711	    711607 ns/op	 2771662 B/op	    2018 allocs/op
+BenchmarkTable/engine=templ-8          	    1563	    742458 ns/op	 2771658 B/op	    2018 allocs/op
+BenchmarkTable/engine=templ-8          	    1641	    739410 ns/op	 2771659 B/op	    2018 allocs/op
+BenchmarkTable/engine=templ-8          	    1680	    747263 ns/op	 2771658 B/op	    2018 allocs/op
+BenchmarkTable/engine=templ-8          	    1597	    765068 ns/op	 2771659 B/op	    2018 allocs/op
+BenchmarkTable/engine=templ-8          	    1600	    779324 ns/op	 2771658 B/op	    2018 allocs/op
+BenchmarkTable/engine=templ-8          	    1584	    744408 ns/op	 2771659 B/op	    2018 allocs/op
+BenchmarkLayout/engine=native-8        	     148	   7699229 ns/op	 5064008 B/op	   56779 allocs/op
+BenchmarkLayout/engine=native-8        	     100	  11684628 ns/op	 5064140 B/op	   56780 allocs/op
+BenchmarkLayout/engine=native-8        	      86	  11806343 ns/op	 5064260 B/op	   56781 allocs/op
+BenchmarkLayout/engine=native-8        	     100	  12123103 ns/op	 5064174 B/op	   56780 allocs/op
+BenchmarkLayout/engine=native-8        	      91	  11403298 ns/op	 5064249 B/op	   56780 allocs/op
+BenchmarkLayout/engine=native-8        	     156	   7999091 ns/op	 5064357 B/op	   56781 allocs/op
+BenchmarkLayout/engine=native-8        	     153	   7918570 ns/op	 5064097 B/op	   56780 allocs/op
+BenchmarkLayout/engine=native-8        	     100	  10493425 ns/op	 5064207 B/op	   56780 allocs/op
+BenchmarkLayout/engine=native-8        	     100	  12014142 ns/op	 5064297 B/op	   56780 allocs/op
+BenchmarkLayout/engine=native-8        	      94	  11832233 ns/op	 5064389 B/op	   56781 allocs/op
+BenchmarkLayout/engine=templ-8         	    1152	   1060498 ns/op	 2771462 B/op	    2017 allocs/op
+BenchmarkLayout/engine=templ-8         	    1534	    775345 ns/op	 2771464 B/op	    2017 allocs/op
+BenchmarkLayout/engine=templ-8         	    1480	    747462 ns/op	 2771463 B/op	    2017 allocs/op
+BenchmarkLayout/engine=templ-8         	    1544	    786429 ns/op	 2771464 B/op	    2017 allocs/op
+BenchmarkLayout/engine=templ-8         	    1453	    777924 ns/op	 2771464 B/op	    2017 allocs/op
+BenchmarkLayout/engine=templ-8         	    1641	    757021 ns/op	 2771465 B/op	    2017 allocs/op
+BenchmarkLayout/engine=templ-8         	    1467	    731722 ns/op	 2771466 B/op	    2017 allocs/op
+BenchmarkLayout/engine=templ-8         	    1755	    667000 ns/op	 2771467 B/op	    2017 allocs/op
+BenchmarkLayout/engine=templ-8         	    1798	    663276 ns/op	 2771467 B/op	    2017 allocs/op
+BenchmarkLayout/engine=templ-8         	    1798	    675080 ns/op	 2771466 B/op	    2017 allocs/op
+PASS
+ok  	templ-benchmark	93.371s

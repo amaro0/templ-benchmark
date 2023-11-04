@@ -1,0 +1,51 @@
+package main
+
+import "strconv"
+
+templ helloStruct(data HelloData) {
+    <div>Hello, { data.Name }</div>
+}
+
+templ layout(body templ.Component) {
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"/>
+        <title>Hello, world!</title>
+      </head>
+      <body>
+        {! body }
+      </body>
+    </html>
+}
+
+
+templ table(table Table) {
+    <p>Table: { table.TableName }</p>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Complex</th>
+            <th>Static</th>
+        </tr>
+          for _, item := range table.Items {
+            <tr>
+                <td>{ item.Id }</td>
+                <td>{ item.Name }</td>
+                <td>{ strconv.Itoa(item.Number) }</td>
+                <td>
+                    <div>
+                        <p>{ item.Complex.Id }</p>
+                        <p>{ item.Complex.Name }</p>
+                        <p>{ strconv.Itoa(item.Complex.Number) }</p>
+                    </div>
+                </td>
+                <td>Static</td>
+            </tr>
+        }
+    </table>
+}
